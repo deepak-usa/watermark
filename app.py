@@ -1,9 +1,8 @@
 import os
 import cv2
 import numpy as np
-from flask import Flask, request, send_file
+from flask import Flask, request, send_file, render_template_string
 from flask_cors import CORS
-
 
 app = Flask(__name__)
 CORS(app)
