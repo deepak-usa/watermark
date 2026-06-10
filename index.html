@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Video Watermark Remover</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; text-align: center; }
+        #video-container { position: relative; display: inline-block; margin-top: 20px; background: #000; }
+        #canvas-overlay { position: absolute; top: 0; left: 0; cursor: crosshair; }
+        #process-btn { padding: 10px 20px; font-size: 16px; background-color: #28a745; color: white; border: none; cursor: pointer; border-radius: 5px; margin-top: 20px;}
+        #process-btn:disabled { background-color: #6c757d; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+    <h1>Remove Watermark from Video</h1>
+    <p>Upload a video, drag a box over the logo/date, and click process.</p>
+    
+    <input type="file" id="video-upload" accept="video/*"><br>
+    
+    <div id="video-container">
+        <video id="video-player" width="640" style="display:none;"></video>
+        <canvas id="canvas-overlay" width="640"></canvas>
+    </div>
+    
+    <br>
+    <button id="process-btn" disabled>Erase Logo & Download</button>
+
+    <script src="/script.js" type="module"></script>
+</body>
+</html>
