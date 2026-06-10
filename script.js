@@ -82,7 +82,7 @@ processBtn.addEventListener('click', async () => {
     formData.append('h', Math.round(Math.abs(boxH * scaleY)));
 
     try {
-        let response = await fetch('http://127.0.0.1:5000/api/remove-logo', { 
+        let response = await fetch('https://watermark-qmov.onrender.com/api/remove-logo', { 
             method: 'POST', 
             body: formData 
         });
